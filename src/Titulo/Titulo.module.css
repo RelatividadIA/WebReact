@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@200&display=swap');
+
+.contenedorTitulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .videoFondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .textoSuperpuesto {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    font-size: 4em;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 400;
+    margin: 0 20px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    white-space: nowrap;
+  }
+  
+  @media (max-width: 600px) {
+    .textoSuperpuesto {
+      font-size: 2em; /* Tamaño de fuente ajustado para pantallas pequeñas */
+      margin: 0 10px; /* Margen ajustado para pantallas pequeñas */
+      white-space: normal;
+      text-align: center;
+    }
+    
+  }
+  

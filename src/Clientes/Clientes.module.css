@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap');
+
+/* Asegurarse de que no haya margen ni padding globales que puedan afectar */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Previene desbordamiento horizontal */
+}
+
+.gridcontainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    background-color: black; /* Fondo negro para la sección */
+    font-family: 'Spartan', sans-serif; /* Aplica la fuente Spartan a todos los elementos dentro */
+    margin: 0 auto; /* Centra el gridcontainer si hay espacio disponible */
+    width: auto; /* Ajusta esto según sea necesario */
+    max-width: 100%; /* Asegura que el contenedor no se extienda más allá del ancho de la pantalla */
+}
+
+@media (max-width: 900px) {
+    .gridcontainer {
+        grid-template-columns: 1fr; /* Una sola columna para pantallas pequeñas */
+    }
+}
+
+.griditem {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #000; /* Fondo negro para cada elemento de la grilla */
+    color: #fff; /* Texto en blanco para contraste */
+    font-family: 'Spartan', sans-serif; /* Asegura que la fuente Spartan se aplique aquí también */
+}
+
+.griditem h2, .griditem p, .griditem button {
+    background-color: transparent; /* Fondo transparente para estos elementos */
+    font-family: 'Spartan', sans-serif; /* Aplica Spartan a h2, p, y botones */
+}
+
+.griditem button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #000000; /* Botón en negro */
+    color: #ffffff; /* Texto del botón en blanco */
+    font-family: 'Spartan', sans-serif; /* Aplica Spartan a los botones */
+}
+
+.griditem button:hover {
+    background-color: #ffffff; /* Fondo del botón en blanco al pasar el cursor */
+    color: #000000; /* Texto del botón en negro para contraste */
+}

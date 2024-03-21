@@ -1,0 +1,72 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000; /* Fondo negro */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+  height: 60px; /* Hace el menú más alto */
+  display: flex;
+  align-items: center; /* Centra el contenido del menú verticalmente */
+  justify-content: start;
+}
+
+.logo {
+  height: 20px; /* Ajusta esto según el tamaño deseado para tu logo */
+  margin-left: 20px; /* Añade un margen derecho para separarlo de la navegación */
+  margin-right: 20px; /* Añade un margen derecho para separarlo de la navegación */
+  /* Añade más estilos según necesites */
+}
+
+.navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto; /* Centra la navegación horizontalmente */
+  display: flex;
+}
+
+.navigation li {
+  margin: 0 20px;
+}
+
+.navigation li a {
+  text-decoration: none;
+  color: #fff; /* Texto blanco */
+  font-family: 'Spartan', sans-serif; /* Usa la fuente Spartan */
+  font-weight: 500; /* Peso Light 300 */
+}
+
+/* Agrega esto a tu Header.module.css existente */
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .navigation {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Ajusta este valor al alto de tu header */
+    left: 0;
+    background-color: #000;
+  }
+  
+  .show {
+    display: flex;
+  }
+
+  .menuButton {
+    display: block;
+    margin-left: auto;
+  }
+}
